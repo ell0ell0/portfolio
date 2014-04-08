@@ -116,7 +116,7 @@ category: Overview
         <section id="work-samples" class="container-fluid">
             <div class="row">
                 {% for post in site.posts %}
-                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="{{ post.url }}" data-tag="{{ post.data }}">
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="{{ site.baseurl }}{{ post.url }}" data-tag="{{ post.data }}">
                     <img alt="{{ post.title }} thumbnail" src="{{ post.thumbnail }}">
                     <div class="sample-bg theme-bg-orange"></div> 
                     <div class="sample-desc-wrapper">
