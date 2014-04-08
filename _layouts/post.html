@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+    <body>
+        {% include post_menu.html %}
+
+        <section class="hero-image">
+            <img alt="hero image" src="{{ page.heroImage }}">
+            <div class="hero-title-container">
+                <h1 class="display-text">{{ page.title }}</h1>
+            </div>
+        </section>
+
+        <section id="content" class="container-fluid">
+            <div class="row">
+                <div class="content-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    {{ content }}
+                </div>
+            </div>
+        </section>
+
+        {% include js_includes.html %}
+    </body>
+</html>
