@@ -41,9 +41,6 @@ category: Overview
                 <a data-color="brown" class="menu-button-wrapper theme-txt-orange">
                     <h5 class="menu-button"><i class="fa fa-circle brown"></i> Mud</h5>
                 </a>
-                <a data-color="black" class="menu-button-wrapper theme-txt-orange">
-                    <h5 class="menu-button"><i class="fa fa-circle black"></i> Noir</h5>
-                </a>
                 <a data-color="green" class="menu-button-wrapper theme-txt-orange">
                     <h5 class="menu-button"><i class="fa fa-circle green"></i> Grün</h5>
                 </a>
@@ -116,7 +113,7 @@ category: Overview
         <section id="work-samples" class="container-fluid">
             <div class="row">
                 {% for post in site.posts %}
-                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="{{ site.baseurl }}{{ post.url }}" data-tag="{{ post.data }}">
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12" href="{{ site.baseurl }}{{ post.url }}" data-tag="{{ post.data }}">
                     <img alt="{{ post.title }} thumbnail" src="{{ post.thumbnail }}">
                     <div class="sample-bg theme-bg-orange"></div> 
                     <div class="sample-desc-wrapper">

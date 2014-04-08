@@ -1643,6 +1643,10 @@ Header
   .menu-button-wrapper:nth-child(4) {
     width: 15%;
   }
+  .menu-setting-container .menu-button-wrapper {
+    padding: 20px;
+    width: 100%;
+  }
 }
 /*--------------------------------
 Intro
@@ -1874,6 +1878,11 @@ Work samples
   top: 0;
   z-index: 1;
 }
+@media (max-width: 680px) {
+  .sample-wrapper {
+    height: 180px;
+  }
+}
 /*--------------------------------
 About
 --------------------------------*/
@@ -1921,7 +1930,29 @@ Contact
     margin-bottom: 40px;
   }
   #contact {
-    padding-left: 0;
+    padding: 0;
+  }
+  .about-container {
+    padding: 0 30px;
+  }
+  #contact h3 {
+    margin-top: 0;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.125em;
+    margin-bottom: 1em;
+    font-size: 1.83333333em;
+    line-height: 1.36363636;
+  }
+  #contact h4 {
+    margin-top: 0;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.0625em;
+    text-transform: uppercase;
+    margin-bottom: 1.22222222em;
+    font-size: 1.5em;
+    line-height: 1.44444444;
   }
 }
 /*--------------------------------

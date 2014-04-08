@@ -380,7 +380,11 @@ Header
     .menu-button-wrapper:nth-child(4) {
         width: 15%;
     }
-
+    
+    .menu-setting-container .menu-button-wrapper {
+        padding: 20px;
+        width: 100%;
+    }
 }
 
 /*--------------------------------
@@ -655,6 +659,12 @@ Work samples
     z-index: 1;
 }
 
+@media (max-width:680px) {
+    .sample-wrapper {
+        height: 180px;
+    }
+}
+
 /*--------------------------------
 About
 --------------------------------*/
@@ -676,6 +686,10 @@ About
 .about-text {
     padding: 0;
     padding-right: 60px;
+}
+
+@media (max-width:680px) {
+
 }
 
 /*--------------------------------
@@ -711,8 +725,20 @@ Contact
         margin-bottom: 40px;
     }
     #contact {
-        padding-left: 0;
+        padding: 0;
     }
+
+    .about-container {
+        padding: 0 30px;
+    }
+
+    #contact h3 {
+        .h4;
+    }
+    #contact h4 {
+        .h5;
+    }
+
 }
 
 
