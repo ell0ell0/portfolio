@@ -74,22 +74,22 @@
                 </canvas>
                 <h1 class="display-text">Lee Williams</h1>
                 <div class="tagline">
-                    <h4 class="h4">Designer / Developer / Art Director / Creative type person</h4>
+                    <h4 class="h4">Designer / Developer / Art Director / Creative-Type-Person</h4>
                 </div>
             </div>
         </section>
 
         <section id="work" class="container-fluid">
             <div class="row filters-wrapper">
-                <a class="filter-button-container theme-txt-orange">
-                    <div class="filter-bg"></div> 
-                    <div class="filter-hightlight theme-bg-orange"></div>
-                    <div class="filter-text-wrapper">
+                <a id="filter-all" data-tag="all" class="filter-button-container theme-txt-orange">
+                    <div class="filter-bg filter-bg-active"></div> 
+                    <div class="filter-hightlight filter-hightlight-active theme-bg-orange"></div>
+                    <div class="filter-text-wrapper filter-text-wrapper-active">
                         <i class="fa fa-th-large"></i>
                         <h5>all</h5>
                     </div>
                 </a>
-                <a class="filter-button-container theme-txt-orange">
+                <a id="filter-web" data-tag="web" class="filter-button-container theme-txt-orange">
                     <div class="filter-bg"></div> 
                     <div class="filter-hightlight theme-bg-orange"></div> 
                     <div class="filter-text-wrapper">
@@ -97,7 +97,7 @@
                         <h5>web</h5>
                     </div>
                 </a>
-                <a class="filter-button-container theme-txt-orange">
+                <a id="filter-print" data-tag="print" class="filter-button-container theme-txt-orange">
                     <div class="filter-bg"></div> 
                     <div class="filter-hightlight theme-bg-orange"></div> 
                     <div class="filter-text-wrapper">
@@ -105,7 +105,7 @@
                         <h5>print</h5>
                     </div>
                 </a>
-                <a class="filter-button-container theme-txt-orange">
+                <a id="filter-digital" data-tag="digital" class="filter-button-container theme-txt-orange">
                     <div class="filter-bg"></div> 
                     <div class="filter-hightlight theme-bg-orange"></div> 
                     <div class="filter-text-wrapper">
@@ -113,21 +113,22 @@
                         <h5>digital</h5>
                     </div>
                 </a>
-                <a class="filter-button-container theme-txt-orange">
+<!--                 <a id="filter-other" data-tag="other" class="filter-button-container theme-txt-orange">
                     <div class="filter-bg"></div> 
                     <div class="filter-hightlight theme-bg-orange"></div> 
                     <div class="filter-text-wrapper">
                         <i class="fa fa-briefcase"></i>
                         <h5>other</h5> 
                     </div>
-                </a>
+                </a> -->
             </div>
         </section>
 
         <section id="work-samples" class="container-fluid">
             <div class="row">
                 
-                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="//surface.html" data-tag="digital">
+                <!-- / add back in to link-->
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/surface.html" data-tag="digital">
                     <img alt="Surface thumbnail" src="static/img/surface/surfaceThumb.jpg">
                     <div class="sample-bg theme-bg-orange"></div> 
                     <div class="sample-desc-wrapper">
@@ -136,16 +137,28 @@
                     </div>
                 </a> 
                 
-                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="//proto.html" data-tag="print">
-                    <img alt="Proto magazine thumbnail" src="static/img/proto/protoThumb.jpg">
+                <!-- / add back in to link-->
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/rw.html" data-tag="print">
+                    <img alt="Runner's World Magazine thumbnail" src="static/img/rw/rwThumb.jpg">
                     <div class="sample-bg theme-bg-orange"></div> 
                     <div class="sample-desc-wrapper">
-                        <h3>Proto magazine</h3>
+                        <h3>Runner's World Magazine</h3>
                         <div class="sample-underline theme-bg-orange"></div>
                     </div>
                 </a> 
                 
-                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="//playTech.html" data-tag="print">
+                <!-- / add back in to link-->
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/proto.html" data-tag="print">
+                    <img alt="Proto Magazine thumbnail" src="static/img/proto/protoThumb.jpg">
+                    <div class="sample-bg theme-bg-orange"></div> 
+                    <div class="sample-desc-wrapper">
+                        <h3>Proto Magazine</h3>
+                        <div class="sample-underline theme-bg-orange"></div>
+                    </div>
+                </a> 
+                
+                <!-- / add back in to link-->
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/playTech.html" data-tag="print">
                     <img alt="Play Tech thumbnail" src="static/img/playtech/playtechThumb.jpg">
                     <div class="sample-bg theme-bg-orange"></div> 
                     <div class="sample-desc-wrapper">
@@ -154,7 +167,8 @@
                     </div>
                 </a> 
                 
-                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="//parsons.html" data-tag="digital">
+                <!-- / add back in to link-->
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/parsons.html" data-tag="digital">
                     <img alt="Parsons App thumbnail" src="static/img/parsons/parsonsThumb.jpg">
                     <div class="sample-bg theme-bg-orange"></div> 
                     <div class="sample-desc-wrapper">
@@ -163,7 +177,18 @@
                     </div>
                 </a> 
                 
-                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="//foodtruck.html" data-tag="digital">
+                <!-- / add back in to link-->
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/npd.html" data-tag="print">
+                    <img alt="National Portfolio Day thumbnail" src="static/img/npd/npdThumb.jpg">
+                    <div class="sample-bg theme-bg-orange"></div> 
+                    <div class="sample-desc-wrapper">
+                        <h3>National Portfolio Day</h3>
+                        <div class="sample-underline theme-bg-orange"></div>
+                    </div>
+                </a> 
+                
+                <!-- / add back in to link-->
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/foodtruck.html" data-tag="digital">
                     <img alt="Meal Mobile thumbnail" src="static/img/food/mealThumb.jpg">
                     <div class="sample-bg theme-bg-orange"></div> 
                     <div class="sample-desc-wrapper">
@@ -172,16 +197,28 @@
                     </div>
                 </a> 
                 
-                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="//Consumerfinance.gov_preview.html" data-tag="web">
-                    <img alt="CFPB refresh micro site thumbnail" src="static/img/preview/previewThumb.jpg">
+                <!-- / add back in to link-->
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/cfpb.html" data-tag="web">
+                    <img alt="Consumer finance.gov refresh thumbnail" src="static/img/cf.gov/cfThumb.jpg">
                     <div class="sample-bg theme-bg-orange"></div> 
                     <div class="sample-desc-wrapper">
-                        <h3>CFPB refresh micro site</h3>
+                        <h3>Consumer finance.gov refresh</h3>
                         <div class="sample-underline theme-bg-orange"></div>
                     </div>
                 </a> 
                 
-                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="//Consumer_complain.html" data-tag="web">
+                <!-- / add back in to link-->
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/Consumerfinance.gov_preview.html" data-tag="web">
+                    <img alt="CFPB Refresh Microsite thumbnail" src="static/img/preview/previewThumb.jpg">
+                    <div class="sample-bg theme-bg-orange"></div> 
+                    <div class="sample-desc-wrapper">
+                        <h3>CFPB Refresh Microsite</h3>
+                        <div class="sample-underline theme-bg-orange"></div>
+                    </div>
+                </a> 
+                
+                <!-- / add back in to link-->
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/Consumer_complain.html" data-tag="web">
                     <img alt="Complaint Form thumbnail" src="static/img/complaint/complaintThumb.jpg">
                     <div class="sample-bg theme-bg-orange"></div> 
                     <div class="sample-desc-wrapper">
@@ -190,7 +227,8 @@
                     </div>
                 </a> 
                 
-                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="//Bounce.html" data-tag="digital">
+                <!-- / add back in to link-->
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/Bounce.html" data-tag="digital">
                     <img alt="Bounce thumbnail" src="static/img/bounce/bounceThumb.jpg">
                     <div class="sample-bg theme-bg-orange"></div> 
                     <div class="sample-desc-wrapper">
@@ -207,16 +245,16 @@
                 <div class="about-container">
                     <div class="about-text col-md-6 col-sm-6 col-xs-12">
                         <h1 class="theme-txt-orange">Thanks for stopping by!</h1>
-                        <p>I'm Arthur Lee Williams III. Yes, the third, which is why everyone has always used my middle name (Lee). I’m a designer who’s worked in magazine publishing a little internet startup and now the government. I’m jack of all design trades. I can sketch, wireframe, mockup, code, art direct a photoshoot, make motion graphics and create funky arduino electronic do-hickeys. I love doing it all and I think my portfolio reflects this. 
+                        <p>I'm Arthur Lee Williams III. Yes, the third, which is why everyone has always used my middle name (Lee). I’m a designer who has worked in magazine publishing, a little internet startup, and now the government. I’m a jack of all design trades. I can sketch, wireframe, mock up, code, art-direct a photo shoot, make motion graphics and create funky Arduino electronic doohickeys. I love doing it all and I think my portfolio reflects this.  doing it all and I think my portfolio reflects this. 
                         <br><br>
-                    When not working, I’m probably playing video games (PC ftw), working on my motorcycle compulsively, shooting (bow and arrow), playing table top games, and trying to find a bar to play shuffleboard at.
+                        When not working, I’m probably playing video games (PC ftw), working on my motorcycle compulsively, shooting (bow and arrow), playing tabletop games, and trying to find a bar with shuffleboard. 
                         <br><br>
-If you are interested in working together I'm available for freelance, contract or full time work. </p>
+                        If you are interested in working together, I'm available for freelance, contract or full-time work.  </p>
                     </div>
 
                     <div id="contact" class="col-md-6 col-sm-6 col-xs-12">
                         <div class="hero-image">
-                            <img alt="my self portrait" src="static/img/me.jpg">
+                            <img alt="my self portrait" src="static/img/portrait.jpg">
                         </div>
                         <div class="contact-email">
                             <h3 class="contact-label theme-txt-orange"><span class="fa fa-envelope"> Email</h3>
@@ -240,5 +278,6 @@ If you are interested in working together I'm available for freelance, contract 
 <script src="static/js/modernizr.min.js"></script>
 <script src="static/js/requestNextAnimationFrame.js"></script>
 <script src="static/js/main.js"></script>
+        <script src="static/js/canvasStuff.js"></script>
     </body>
 </html>

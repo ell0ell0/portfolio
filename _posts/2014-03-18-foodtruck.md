@@ -6,7 +6,7 @@ thumbnail: static/img/food/mealThumb.jpg
 heroImage: static/img/food/mealBG.jpg
 ---
 
-<p>As part of an urban application design class I designed a food truck app called Meal Mobile. Meal Mobile is a location-based app that provides a convenient way for locating, discovering, and favoriting food trucks. I wanted to create a simple functional interface that could provide cart profiles, twitter feeds from the trucks/vendors, and reccomendations based on a users current location. Since this was a rapid prototyping exercise I stuck with the off the shelf IOS buttons and patterns and focused on organizing the content and functionality of the app. </P>
+<p>As part of an urban application design class, I designed a food truck app called Meal Mobile. Meal Mobile is a location-based app that provides a convenient way for locating, discovering, and favoriting food trucks. I wanted to create a simple functional interface that could provide cart profiles, Twitter feeds from the trucks/vendors, and recommendations based on a user's current location. Since this was a rapid prototyping exercise I stuck with the off-the-shelf IOS buttons and patterns and focused on organizing the content and functionality of the app. </P>
 
 <a href="static/img/food/food.jpg"><img alt="meal mobile app" src="static/img/food/food.jpg"></a>
 
