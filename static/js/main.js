@@ -17,8 +17,8 @@ $( document ).ready(function() {
     count++;
   });
 
-  var numParticles = 300;
 
+if (Modernizr.canvas) {
   /*--------------------------------
   Letters
   --------------------------------*/
@@ -271,7 +271,7 @@ $( document ).ready(function() {
   /*--------------------------------
   Particlefield
   --------------------------------*/
-
+  var numParticles = 200;
   var particles = [];
 
   function createParticle(origin) {
@@ -303,6 +303,7 @@ $( document ).ready(function() {
   for (var i = 0; i < numParticles; i++) {
     particles.push(createParticle(center));
   } 
+}
 
   /*--------------------------------
   Evenets

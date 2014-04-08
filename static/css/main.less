@@ -212,8 +212,8 @@ table,
 blockquote,
 figure {
     .webfont-regular;    
-    @font-size: 18px;
-    @line-height: 30px;
+    @font-size: 20px;
+    @line-height: 33px;
 
     margin-bottom: unit( @base-line-height-px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
@@ -223,7 +223,7 @@ figure {
 
 .display-text {
     .webfont-bold;
-    @font-size: 100px;
+    @font-size: 90px;
     @line-height: 126px;
     letter-spacing: 0.25em;
 
@@ -235,6 +235,24 @@ figure {
 .hack {
     position: absolute;
     margin-left: -1000px;
+}
+
+@media (max-width:680px) {
+    p, .p,
+    ul,
+    ol,
+    dl,
+    table,
+    blockquote,
+    figure {
+        .webfont-regular;    
+        @font-size: 16px;
+        @line-height: 22px;
+
+        margin-bottom: unit( @base-line-height-px / @font-size, em );
+        font-size: unit( @font-size / @base-font-size-px, em );
+        line-height: unit( @line-height / @font-size );
+    }
 }
 
 /*--------------------------------
@@ -335,6 +353,36 @@ Header
     width: 200px;
 }
 
+@media (max-width: 680px) {
+    .listening-wrapper {
+        display: none;
+    }
+
+    .menu-wrapper {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-button-wrapper {
+        padding: 20px 0 20px 0;
+        margin: 0;
+    }
+    .menu-button-wrapper:nth-child(1) {
+        width: 24%;
+    }
+    .menu-button-wrapper:nth-child(2) {
+        width: 28%;
+    }
+    .menu-button-wrapper:nth-child(3) {
+        width: 33%;
+    }
+    .menu-button-wrapper:nth-child(4) {
+        width: 15%;
+    }
+
+}
+
 /*--------------------------------
 Intro
 --------------------------------*/
@@ -344,7 +392,7 @@ Intro
     padding: 0;
     margin: 0;
     width: 100%;
-    height: 575px;
+    height: 550px;
     text-align: center;
     overflow: hidden;
 }
@@ -379,7 +427,7 @@ Intro
         display: none;
     }
     #intro .display-text {
-        margin-top: 135px;
+        margin-top: 125px;
 
         @font-size: 55px;
         @line-height: 75px;
@@ -391,12 +439,14 @@ Intro
     }
 
     .tagline {
-        top: 310px;
+        position: relative;
+        display: block;
+        top: auto;
     }
 }
 @media (max-width: 450px) {
     #intro {
-        height: 375px;
+        height: 371px;
     }
     #canvas {
         display: none;
@@ -414,7 +464,9 @@ Intro
     }
 
     .tagline {
-        top: 380px;
+        position: relative;
+        display: block;
+        top: auto;
     }
 }
 
@@ -522,7 +574,7 @@ Work samples
 --------------------------------*/
 
 #work-samples {
-    
+    background: @gray-20;
 }
 
 .sample-wrapper {
@@ -570,6 +622,10 @@ Work samples
     bottom: 0;
     padding: 30px 30px 40px 30px;
     z-index: 10;
+}
+
+.sample-desc-wrapper h3 {
+    text-shadow: 2px 2px rgba(0,0,0,0.5);
 }
 
 .sample-underline {
@@ -654,11 +710,23 @@ Post
 .hero-image {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    text-align: center;
+    margin-bottom: -10%;
     z-index: 1;
 }
 .hero-image img {
     width: 100%;
+}
+.hero-title-container {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 20%;
+}
+.hero-title-container h1 {
+    color: #fff;
+    text-shadow: 5px 5px rgba(0,0,0,0.5);
+    padding: 0 30px 0 30px;
 }
 
 #content {
@@ -672,20 +740,70 @@ Post
     background: fade(@white, 95%);
     padding: 60px;
     margin:0 auto;
-    margin-top: -95px;
     z-index: 10;
 }
 
+.content-wrapper img {
+    width: 100%;
+    margin-top: 30px;
+}
 
-@media (max-width:768px) {
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    height: 0;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width:680px) {
     .hero-image {
-
+        margin-bottom: 0;
     }
     #content .row {
-        padding: 30px 0 30px 0;
+        padding: 0 0 30px 0;
         margin-top: 0;
     }
-    h1 {
-        .h2;
+
+    .hero-title-container {
+        position: relative;
+        display: block;
+        margin-top: 45px;
+        padding: 0 30px 0 30px; 
+    }
+
+    .hero-title-container h1 {
+
+        color: @black;
+        text-shadow: none;
+
+        .h2;    
+    }
+
+    #content p {
+        text-align: left;
+    }
+    .post-menu {
+        float: right;
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .post-menu .menu-button-wrapper, 
+    .menu-back-wrapper .menu-button-wrapper
+    {
+        float: left;
+        width: auto;
+        padding: 20px;
     }
 }
