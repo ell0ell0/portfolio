@@ -1,0 +1,26 @@
+<section id="header" class="container-fluid">
+    <div class="row">
+
+        <div class="menu-back-wrapper">
+            <a href="index.html" class="menu-button-wrapper theme-txt-orange">
+                <h5 class="menu-button">Back</h5>
+            </a>
+        </div>
+
+        <div class="menu-wrapper post-menu">
+            {% if page.previous.url %} 
+                <a href="{{page.previous.url}}" class="menu-button-wrapper theme-txt-orange">
+                    <h5 class="menu-button"><span class="fa fa-chevron-left"></span>  Prev</h5>
+                </a>
+            {% endif %} 
+            {% if page.next.url %} 
+                <a href="{{page.next.url}}" class="menu-button-wrapper theme-txt-orange">
+                    <h5 class="menu-button">Next <span class="fa fa-chevron-right"></span> </h5>
+                </a>
+            {% endif %} 
+        </div>
+    </div>
+</section>
+
+
+

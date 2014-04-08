@@ -1,13 +1,24 @@
----
-layout: homepage
-title: Lee Williams portfolio
-category: Overview
----
-
-
 <!DOCTYPE html>
 <html lang="en">
-    {% include head.html %}
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lee Williams portfolio</title>
+
+        <!-- Bootstrap -->
+        <link href="static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="static/css/main.css" rel="stylesheet">
+
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
     <body>
         <section id="header" class="container-fluid">
             <div class="row">
@@ -115,16 +126,79 @@ category: Overview
 
         <section id="work-samples" class="container-fluid">
             <div class="row">
-                {% for post in site.posts %}
-                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="{{ post.url }}" data-tag="{{ post.data }}">
-                    <img alt="{{ post.title }} thumbnail" src="{{ post.thumbnail }}">
+                
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/surface.html" data-tag="digital">
+                    <img alt="Surface thumbnail" src="static/img/surface/surfaceThumb.jpg">
                     <div class="sample-bg theme-bg-orange"></div> 
                     <div class="sample-desc-wrapper">
-                        <h3>{{ post.title }}</h3>
+                        <h3>Surface</h3>
                         <div class="sample-underline theme-bg-orange"></div>
                     </div>
                 </a> 
-                {% endfor %}   
+                
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/proto.html" data-tag="print">
+                    <img alt="Proto magazine thumbnail" src="static/img/proto/protoThumb.jpg">
+                    <div class="sample-bg theme-bg-orange"></div> 
+                    <div class="sample-desc-wrapper">
+                        <h3>Proto magazine</h3>
+                        <div class="sample-underline theme-bg-orange"></div>
+                    </div>
+                </a> 
+                
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/playTech.html" data-tag="print">
+                    <img alt="Play Tech thumbnail" src="static/img/playtech/playtechThumb.jpg">
+                    <div class="sample-bg theme-bg-orange"></div> 
+                    <div class="sample-desc-wrapper">
+                        <h3>Play Tech</h3>
+                        <div class="sample-underline theme-bg-orange"></div>
+                    </div>
+                </a> 
+                
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/parsons.html" data-tag="digital">
+                    <img alt="Parsons App thumbnail" src="static/img/parsons/parsonsThumb.jpg">
+                    <div class="sample-bg theme-bg-orange"></div> 
+                    <div class="sample-desc-wrapper">
+                        <h3>Parsons App</h3>
+                        <div class="sample-underline theme-bg-orange"></div>
+                    </div>
+                </a> 
+                
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/foodtruck.html" data-tag="digital">
+                    <img alt="Meal Mobile thumbnail" src="static/img/food/mealThumb.jpg">
+                    <div class="sample-bg theme-bg-orange"></div> 
+                    <div class="sample-desc-wrapper">
+                        <h3>Meal Mobile</h3>
+                        <div class="sample-underline theme-bg-orange"></div>
+                    </div>
+                </a> 
+                
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/Consumerfinance.gov_preview.html" data-tag="web">
+                    <img alt="CFPB refresh micro site thumbnail" src="../static/img/preview/previewThumb.jpg">
+                    <div class="sample-bg theme-bg-orange"></div> 
+                    <div class="sample-desc-wrapper">
+                        <h3>CFPB refresh micro site</h3>
+                        <div class="sample-underline theme-bg-orange"></div>
+                    </div>
+                </a> 
+                
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/Consumer_complain.html" data-tag="web">
+                    <img alt="Complaint Form thumbnail" src="static/img/complaint/complaintThumb.jpg">
+                    <div class="sample-bg theme-bg-orange"></div> 
+                    <div class="sample-desc-wrapper">
+                        <h3>Complaint Form</h3>
+                        <div class="sample-underline theme-bg-orange"></div>
+                    </div>
+                </a> 
+                
+                <a class="sample-wrapper col-lg-3 col-md-4 col-sm-4 col-xs-12"href="/Bounce.html" data-tag="digital">
+                    <img alt="Bounce thumbnail" src="static/img/bounce/bounceThumb.jpg">
+                    <div class="sample-bg theme-bg-orange"></div> 
+                    <div class="sample-desc-wrapper">
+                        <h3>Bounce</h3>
+                        <div class="sample-underline theme-bg-orange"></div>
+                    </div>
+                </a> 
+                   
             </div>      
         </section>
 
@@ -159,6 +233,12 @@ If you are interested in working together I'm available for freelance, contract 
     
         </section> 
 
-        {% include js_includes.html %}
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="static/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="static/js/bootstrap.min.js"></script> 
+<script src="static/js/modernizr.min.js"></script>
+<script src="static/js/requestNextAnimationFrame.js"></script>
+<script src="static/js/main.js"></script>
     </body>
 </html>
