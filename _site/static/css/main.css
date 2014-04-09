@@ -2028,6 +2028,7 @@ Post
   .hero-title-container h1 {
     color: #101820;
     text-shadow: none;
+    letter-spacing: 0.125em;
     margin-top: 0;
     font-family: "Open Sans", Helvetica, sans-serif;
     font-weight: 400;
