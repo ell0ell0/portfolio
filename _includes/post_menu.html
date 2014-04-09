@@ -8,12 +8,12 @@
         </div>
 
         <div class="menu-wrapper post-menu">
-            {% if page.previous.url %} 
+            {% if page.next.url %} 
                 <a href="{{ site.baseurl }}{{page.next.url}}" class="menu-button-wrapper theme-txt-orange">
                     <h5 class="menu-button"><span class="fa fa-chevron-left"></span>  Prev</h5>
                 </a>
             {% endif %} 
-            {% if page.next.url %} 
+            {% if page.previous.url %} 
                 <a href="{{ site.baseurl }}{{page.previous.url}}" class="menu-button-wrapper theme-txt-orange">
                     <h5 class="menu-button">Next <span class="fa fa-chevron-right"></span> </h5>
                 </a>
