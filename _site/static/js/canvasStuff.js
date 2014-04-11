@@ -1,5 +1,13 @@
 $( document ).ready(function() {     
   
+var pause;
+
+if( $(window).width() > 680 ) {
+  pause = false;
+} else {
+  pause = true;
+}
+
 if (Modernizr.canvas) {
   /*--------------------------------
   Letters
@@ -199,21 +207,23 @@ if (Modernizr.canvas) {
     }
 
     function animate() {
-      eraseBackground();
-      update();
+      if (!pause) {
+        eraseBackground();
+        update();
 
-      for (var i = 0; i<particles.length; i++) {
-        context.beginPath();
-        context.arc(particles[i].pos.x, particles[i].pos.y, particles[i].radius, 0, 2 * Math.PI, false);
-        context.fillStyle = "rgba(255, 255, 255, 0.1)";
-        context.fill();
+        for (var i = 0; i<particles.length; i++) {
+          context.beginPath();
+          context.arc(particles[i].pos.x, particles[i].pos.y, particles[i].radius, 0, 2 * Math.PI, false);
+          context.fillStyle = "rgba(255, 255, 255, 0.1)";
+          context.fill();
+        }
+
+        for(var i = 0; i<letters.length; i++) {
+          drawText(letters[i]);
+        }
+
+        window.requestNextAnimationFrame(animate);
       }
-
-      for(var i = 0; i<letters.length; i++) {
-        drawText(letters[i]);
-      }
-
-      window.requestNextAnimationFrame(animate);
     }
 
     canvas.onmousemove = function (e) {
@@ -228,6 +238,64 @@ if (Modernizr.canvas) {
     }
 
     animate();
+
+    $( window ).resize(function() {
+
+    //reset the carousel after resize (just in case)
+    waitForFinalEvent(function(){
+
+      if( $(window).width() > 680 && pause != false ) {
+        pause = false;
+        animate();
+      } 
+      if( $(window).width() < 680 && pause != true ) {
+        pause = true;
+        animate();
+      } 
+
+      eraseBackground();
+
+      context.canvas.width  = $("#intro").width();
+      context.canvas.height = $("#intro").height();
+
+      center = { 
+        x: context.canvas.width/2,
+        y: context.canvas.height/2
+      };
+
+      fontSize = Math.floor(context.canvas.width/120);
+      totalWidth = 0;
+
+      //draw the letters and get the widths
+      for(var i = 0; i<letters.length; i++) {
+        drawText(letters[i]);
+        totalWidth += letters[i].w;
+      }
+      //base the letter spacing on the size of the screen
+      letterspace = (context.canvas.width - totalWidth) / (letters.length + 11);
+      //add in the letterspace unit to the total width of the text block
+      totalWidth += letterspace * (letters.length - 1);
+
+      start = {
+        x: center.x - (totalWidth/2), 
+        y: center.y + 10
+      };
+
+      eraseBackground();
+
+      //place the letters and define their origin points
+      for(var i = 0; i<letters.length; i++) {
+        letters[i].origin.x = start.x;
+        letters[i].origin.y = start.y;
+
+        drawText(letters[i]);
+
+        start.x += letters[i].w + letterspace;
+      }
+
+    }, 200, "reset stuff");
+
+  });
 
   }, 200);
 
@@ -288,54 +356,6 @@ if (Modernizr.canvas) {
 }
 
 
-  $( window ).resize(function() {
-
-    //reset the carousel after resize (just in case)
-    waitForFinalEvent(function(){
-
-      eraseBackground();
-
-      context.canvas.width  = $("#intro").width();
-      context.canvas.height = $("#intro").height();
-
-      center = { 
-        x: context.canvas.width/2,
-        y: context.canvas.height/2
-      };
-
-      fontSize = Math.floor(context.canvas.width/120);
-      totalWidth = 0;
-
-      //draw the letters and get the widths
-      for(var i = 0; i<letters.length; i++) {
-        drawText(letters[i]);
-        totalWidth += letters[i].w;
-      }
-      //base the letter spacing on the size of the screen
-      letterspace = (context.canvas.width - totalWidth) / (letters.length + 11);
-      //add in the letterspace unit to the total width of the text block
-      totalWidth += letterspace * (letters.length - 1);
-
-      start = {
-        x: center.x - (totalWidth/2), 
-        y: center.y + 10
-      };
-
-      eraseBackground();
-
-      //place the letters and define their origin points
-      for(var i = 0; i<letters.length; i++) {
-        letters[i].origin.x = start.x;
-        letters[i].origin.y = start.y;
-
-        drawText(letters[i]);
-
-        start.x += letters[i].w + letterspace;
-      }
-
-    }, 200, "reset stuff");
-
-  });
 
 
     // ------------------------------------------------
